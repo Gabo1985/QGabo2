@@ -1,0 +1,29 @@
+{
+  "xirsys": {
+    "gateway": "global.xirsys.net",
+    "gatewayTimeout": 6000,
+    "info": {
+      "ident": "Deathcito",
+      "secret": "04ba4028-97e6-11ea-a6dc-0242ac150003",
+      "channel": "WebRTC"
+    },
+    "allowedServices": ["/_token", "/_host", "/_data", "/_ns", "/_turn"],
+    "overrideAllowedChannel": false,
+    "gateways": [
+     
+    ],
+    "fallbackIceServers": [{
+      "urls": [
+       
+      ]
+    }]
+  },
+  "host":{
+    "httpport": 3080,
+    "httpsport": 3443
+  },
+  "maxmind": {
+    "db": "hosted"
+  }
+}
+
