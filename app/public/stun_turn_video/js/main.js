@@ -58,7 +58,7 @@ var username,//local username created dynamically.
 
 //custom: check URL for "ch" var, and set the channel accourdingly
 var ch = decodeURI( (RegExp('ch' + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1] );
-if(ch != 'null' ) channelPath = 'gabriel1985';
+if(ch != 'null' ) channelPath = ch;
 console.log('channel path: ',channelPath);
 
 //if there is no remoteCallID show sharable link to call user.
@@ -336,15 +336,6 @@ window.onload = () => {
     console.log('pretty loaded!!');
 	
 
-var params = location.href.split('?')[1].split('&');
-data = {};
-for (x in params)
- {
-data[params[x].split('=')[0]] = params[x].split('=')[1];
-
- }
-console.log(data[0]);
-
 
     //username = "gabriel1985";//remoto user guid();//create random local username
     username = guid();//create random local username
@@ -360,7 +351,8 @@ console.log(data[0]);
         turnViewEL.style.display = 'none';
     } // if call id does not exist this is the callee
     else {
-		username = "gabriel1985";//guid();
+	     let varUsuario = getURLParameter("usuario");
+		username = varUsuario;//nombredel
 		//aca es No hay room creado
         //callIdEl.innerHTML = location.origin + location.pathname + '?callid='+username;
         callIdEl.value = location.origin + location.pathname + '?callid='+username;
