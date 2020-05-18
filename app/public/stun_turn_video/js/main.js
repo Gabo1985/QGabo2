@@ -334,6 +334,18 @@ function guid(s='user') {
 
 window.onload = () => {
     console.log('pretty loaded!!');
+	
+
+var params = location.href.split('?')[1].split('&');
+data = {};
+for (x in params)
+ {
+data[params[x].split('=')[0]] = params[x].split('=')[1];
+
+ }
+console.log(data[0]);
+
+
     //username = "gabriel1985";//remoto user guid();//create random local username
     username = guid();//create random local username
 	//var usernameremote = guid();//create random local username
